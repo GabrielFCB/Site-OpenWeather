@@ -1,5 +1,5 @@
 //Variáveis e seleção de elementos
-const apiKey="f8a52d7883969f5dcbe05d54d94ddc55";
+const apiKey=; //Adquira sua api key gratuita no Site da Open Weather
 const apiCountryURL1 ="https://flagsapi.com/";
 const apiCountryURL2 ="/shiny/64.png";
 
