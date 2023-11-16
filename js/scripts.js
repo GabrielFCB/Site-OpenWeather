@@ -14,6 +14,8 @@ const countryElement = document.querySelector("#country");
 const humidityElement = document.querySelector("#humidity span");
 const windElement = document.querySelector("#wind span");
 
+const weatherContainer=document.querySelector("#weather-data");
+
 // Funções
 const getWeatherData = async (city) => {
 
@@ -38,8 +40,7 @@ const showWeatherData = async (city)=> {
     humidityElement.innerText= data.main.humidity+"%";
     windElement.innerText= data.wind.speed+"km/h"; 
 
-
-    console.log(data)
+    weatherContainer.classList.remove("hide");
     
 }
 
@@ -51,4 +52,13 @@ searchBtn.addEventListener("click", (e)=>{
 
     showWeatherData(city);
 
+})
+
+cityInput.addEventListener("keyup", (e)=>{
+
+    if (e.code==="Enter") {
+        const city = e.target.value;
+
+        showWeatherData(city);
+    }
 })
