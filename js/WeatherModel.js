@@ -1,7 +1,4 @@
-class WeatherModel{
-    constructor(){
-        this.apiKey =; //Adquira sua api key gratuita no Site da Open Weather
-    }
+class WeatherModelOpenWeather extends WeatherDataProvider{
 
     getWeatherData = async (city) => {
 

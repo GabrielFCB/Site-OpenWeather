@@ -13,7 +13,7 @@ class WeatherView {
     }
 
     showWeatherData = async (city) => {
-        const weatherModel= new WeatherModel();
+        const weatherModel= new WeatherModelOpenWeather(apiKey); //Adicione sua apiKey aqui
         const data = await weatherModel.getWeatherData(city);
         this.cityElement.innerText = data.name;
         this.tempElement.innerText = parseInt(data.main.temp);
@@ -30,3 +30,4 @@ class WeatherView {
 
 
 }
+
